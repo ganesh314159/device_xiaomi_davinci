@@ -40,6 +40,8 @@ void load_davinciglobal() {
     property_override("ro.product.device", "davinci");
     property_override("ro.build.fingerprint", "google/coral/coral:10/QQ3A.200805.001/6578210:user/release-keys");
     property_override("ro.product.mod_device", "davinci_global");
+    property_override("ro.com.google.clientidbase", "android-xiaomi");
+    property_override("ro.com.google.clientidbase.ms", "android-xiaomi-rev1");
 }
 
 void load_davinciin() {
@@ -49,6 +51,7 @@ void load_davinciin() {
     property_override("ro.build.fingerprint", "google/coral/coral:10/QQ3A.200805.001/6578210:user/release-keys");
     property_override("ro.product.mod_device", "davinciin_in_global");
     property_override("ro.boot.product.hardware.sku", "davinciin");
+    property_override("ro.com.google.clientidbase", "android-xiaomi-rev1");
 }
 
 void load_davinci() {
