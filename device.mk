@@ -42,6 +42,8 @@ PRODUCT_COPY_FILES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+PRODUCT_ENFORCE_RRO_TARGETS += *
+
 # Product characteristics
 PRODUCT_CHARACTERISTICS := nosdcard
 
