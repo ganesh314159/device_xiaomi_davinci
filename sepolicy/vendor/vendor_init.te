@@ -1,3 +1,6 @@
 # Allow vendor_init to set vendor_persist_camera_prop
 set_prop(vendor_init, vendor_camera_prop)
 set_prop(vendor_init, vendor_persist_camera_prop)
+
+# Allow init to read last_kmsg file
+allow init proc_last_kmsg:file { r_file_perms setattr };
