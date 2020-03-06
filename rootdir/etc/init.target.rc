@@ -165,6 +165,10 @@ on charger
 
     start qcom-post-boot
 
+on property:persist.sys.device_provisioned=1
+    setprop dalvik.vm.dex2oat-cpu-set 2,3,4,5
+    setprop dalvik.vm.dex2oat-threads 4
+
 service vendor.thermal-engine /vendor/bin/thermal-engine
    class main
    user root
