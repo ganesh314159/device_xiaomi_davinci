@@ -174,6 +174,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.clearkey
 
+# Enable blurs, hidden under dev option
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.surface_flinger.supports_background_blur=1 \
+    persist.sys.sf.disable_blurs=1 \
+    ro.sf.blurs_are_expensive=1
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.davinci
