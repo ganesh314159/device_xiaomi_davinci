@@ -202,7 +202,7 @@ ro.soc.manufacturer=Qualcomm
 ro.soc.model=SM7150
 
 # SurfaceFlinger
-debug.sf.enable_gl_backpressure=1
+debug.sf.disable_backpressure=1
 debug.sf.early.app.duration=16500000
 debug.sf.early.sf.duration=21000000
 debug.sf.earlyGl.app.duration=21000000
