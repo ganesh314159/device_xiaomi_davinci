@@ -4,6 +4,9 @@ vendor.bluetooth.soc=cherokee
 # Camera
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.android.GoogleCamera
 
+# Charger
+ro.charger.enable_suspend=true
+
 # CNE and DPM
 persist.vendor.cne.feature=1
 persist.vendor.dpm.feature=1
