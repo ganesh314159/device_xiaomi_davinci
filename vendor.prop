@@ -133,9 +133,6 @@ vendor.display.enable_optimize_refresh=1
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
-# Fwk detect
-ro.vendor.qti.va_odm.support=1
-
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true
 
