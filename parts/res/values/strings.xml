@@ -60,9 +60,10 @@
     <string name="dirac_preset_metal">Metal</string>
 
     <!-- Popup camera settings -->
+    <string name="popup_settings_title">Pop-up camera settings</string>
     <string name="popup_led_title">Visual effect</string>
     <string name="popup_led_summary">Show animation when the front camera appears and retracts</string>
-    <string name="popup_title">Front camera effects</string>
+    <string name="popup_sound_title">Front camera effects</string>
     <string name="popup_title_muqin">Xylophone</string>
     <string name="popup_title_yingyan">Condor</string>
     <string name="popup_title_mofa">Magic</string>
@@ -72,8 +73,8 @@
 
     <!-- Popup camera strings -->
     <string name="popup_camera_tip">Attention</string>
-    <string name="popup_camera_takeback_falied_times_calibrate">Couldn\'t close front camera multiple times. Try calibrating the camera.</string>
-    <string name="popup_camera_popup_falied_times_calibrate">Couldn\'t open front camera multiple times. Try calibrating the camera.</string>
+    <string name="popup_camera_takeback_failed_times_calibrate">Couldn\'t close front camera multiple times. Try calibrating the camera.</string>
+    <string name="popup_camera_popup_failed_times_calibrate">Couldn\'t open front camera multiple times. Try calibrating the camera.</string>
     <string name="popup_camera_calibrate_running">Front camera cannot be used during calibration.</string>
     <string name="popup_camera_calibrate_now">Calibrate</string>
     <string name="popup_camera_calibrate_failed">Couldn\'t calibrate</string>
