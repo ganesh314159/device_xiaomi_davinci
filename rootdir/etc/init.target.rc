@@ -50,6 +50,11 @@ on init
     write /sys/block/sde/queue/read_ahead_kb 2048
     write /sys/block/sde/queue/nr_requests 256
 
+    chown system camera /dev/drv8846_dev
+    chown system camera /dev/akm09970
+    chmod 0660 /dev/drv8846_dev
+    chmod 0660 /dev/akm09970
+
 on early-fs
     start vold
 
@@ -179,3 +184,8 @@ service remosaic_daemon /vendor/bin/remosaic_daemon
    class late_start
    user camera
    group camera
+
+service vendor.motor /vendor/bin/hw/vendor.xiaomi.hardware.motor@1.0-service
+    class hal
+    user system
+    group system
