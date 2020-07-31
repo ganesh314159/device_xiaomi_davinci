@@ -1,4 +1,5 @@
-hidl_package_root {
-    name: "vendor.xiaomi",
-    path: "device/xiaomi/davinci/interfaces",
+soong_namespace {
+    imports: [
+        "hardware/xiaomi",
+    ],
 }
