@@ -40,7 +40,7 @@ media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 persist.mm.enable.prefetch=true
 
 # Netflix custom property
-ro.netflix.bsp_rev=Q855-16947-1
+ro.netflix.bsp_rev=Q6150-17263-1
 
 # NFC DT
 ro.nfc.port=I2C
