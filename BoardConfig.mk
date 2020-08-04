@@ -17,7 +17,7 @@
 
 BOARD_VENDOR := xiaomi
 
-DEVICE_PATH := device/xiaomi/cepheus
+DEVICE_PATH := device/xiaomi/davinci
 
 BUILD_BROKEN_DUP_RULES := true
 
@@ -38,7 +38,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a75
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := msmnile
+TARGET_BOOTLOADER_BOARD_NAME := sm6150
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
@@ -59,8 +59,8 @@ ifeq ($(TARGET_PREBUILT_KERNEL),)
 endif
 
 # Platform
-TARGET_BOARD_PLATFORM := msmnile
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno640
+TARGET_BOARD_PLATFORM := sm6150
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno618
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
@@ -215,4 +215,4 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
--include vendor/xiaomi/cepheus/BoardConfigVendor.mk
+-include vendor/xiaomi/davinci/BoardConfigVendor.mk

@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=cepheus
+DEVICE=davinci
 VENDOR=xiaomi
 
 INITIAL_COPYRIGHT_YEAR=2019
