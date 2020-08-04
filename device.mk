@@ -377,7 +377,7 @@ PRODUCT_PACKAGES += \
 
 # Recovery
 PRODUCT_PACKAGES += \
-    librecovery_updater_cepheus
+    librecovery_updater_davinci
 
 # RenderScript
 PRODUCT_PACKAGES += \
