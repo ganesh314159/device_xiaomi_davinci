@@ -20,7 +20,6 @@
 
 #include "Power.h"
 
-constexpr static char const* inputDevicesDirectory = "/dev/input/";
 constexpr static int wakeupModeOn = 5;
 constexpr static int wakeupModeOff = 4;
 
@@ -40,36 +39,34 @@ Return<void> Power::powerHint(PowerHint_1_0, int32_t) {
 }
 
 int open_ts_input() {
-    DIR *dir = opendir(inputDevicesDirectory);
-    if (dir == NULL) {
-        return -1;
-    }
-
-    struct dirent *ent;
     int fd = -1;
-    int rc = 0;
+    DIR *dir = opendir("/dev/input");
 
-    while ((ent = readdir(dir)) != NULL) {
-        if (ent->d_type != DT_CHR)
-            continue;
+    if (dir != NULL) {
+        struct dirent *ent;
 
-        char absolute_path[PATH_MAX] = {0};
-        char name[80] = {0};
+        while ((ent = readdir(dir)) != NULL) {
+            if (ent->d_type == DT_CHR) {
+                char absolute_path[PATH_MAX] = {0};
+                char name[80] = {0};
 
-        strcpy(absolute_path, inputDevicesDirectory);
-        strcat(absolute_path, ent->d_name);
+                strcpy(absolute_path, "/dev/input/");
+                strcat(absolute_path, ent->d_name);
 
-        fd = open(absolute_path, O_RDWR);
-        rc = ioctl(fd, EVIOCGNAME(sizeof(name) - 1), &name);
-        if (rc > 0 && (strcmp(name, "fts") == 0)) {
-            break;
+                fd = open(absolute_path, O_RDWR);
+                if (ioctl(fd, EVIOCGNAME(sizeof(name) - 1), &name) > 0) {
+                    if (strcmp(name, "fts_ts") == 0 || strcmp(name, "goodix_ts") == 0 ||
+                            strcmp(name, "NVTCapacitiveTouchScreen") == 0)
+                        break;
+                }
+
+                close(fd);
+                fd = -1;
+            }
         }
 
-        close(fd);
-        fd = -1;
+        closedir(dir);
     }
-
-    closedir(dir);
 
     return fd;
 }

@@ -24,6 +24,7 @@ cc_binary {
     ],
     header_libs: [
         "generated_kernel_headers",
+        "libhardware_headers",
     ],
     shared_libs: [
         "liblog",
