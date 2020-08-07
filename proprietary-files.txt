@@ -417,6 +417,11 @@ vendor/lib64/libhvx_proxy_stub.so
 vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1.so
 vendor/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0_vendor.so
 
+# Fingerprint - (Touchfeature)
+vendor/bin/hw/vendor.xiaomi.hardware.touchfeature@1.0-service
+vendor/etc/init/vendor.xiaomi.hardware.touchfeature@1.0-service.rc
+vendor/lib64/hw/vendor.xiaomi.hardware.touchfeature@1.0-impl.so
+
 # Firmware
 vendor/firmware/a630_sqe.fw
 vendor/firmware/a640_gmu.bin
