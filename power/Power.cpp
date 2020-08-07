@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.power@1.3-service.xiaomi_msmnile"
+#define LOG_TAG "android.hardware.power@1.3-service.davinci"
 
 #include <linux/input.h>
 
