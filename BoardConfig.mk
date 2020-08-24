@@ -197,8 +197,8 @@ BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Vendor init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_cepheus
-TARGET_RECOVERY_DEVICE_MODULES := libinit_cepheus
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_davinci
+TARGET_RECOVERY_DEVICE_MODULES := libinit_davinci
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
