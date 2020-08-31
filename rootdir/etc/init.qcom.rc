@@ -237,6 +237,13 @@ service vendor.ssr_setup /vendor/bin/ssr_setup
 on property:sys.boot_completed=1
     chown media audio /sys/kernel/wdsp0/boot
 
+    # Setup final blkio
+    # value for group_idle is us
+    write /dev/blkio/blkio.weight 1000
+    write /dev/blkio/background/blkio.weight 10
+    write /dev/blkio/blkio.group_idle 2000
+    write /dev/blkio/background/blkio.group_idle 0
+
     start qcom-post-boot
 
 service vendor.qrtr-ns /vendor/bin/qrtr-ns -f
