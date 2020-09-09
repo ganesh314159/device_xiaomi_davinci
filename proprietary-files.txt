@@ -435,6 +435,13 @@ vendor/firmware/ipa_uc.mdt
 vendor/firmware/tas2557_uCDSP_aac.bin
 vendor/firmware/tas2557_uCDSP_goer.bin
 
+# FM
+lib64/fm_helium.so
+lib64/libfm-hci.so
+-product/lib64/vendor.qti.hardware.fm@1.0.so
+vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.fm@1.0.so
+
 # GPS - from LA.UM.8.1.r1-15100-sm8150.0
 vendor/bin/xtwifi-client|7bcc03d9aed7592d13ff98873d304fd4b881e47e
 vendor/bin/xtwifi-inet-agent|b738b9d19afff4e8c317e2dfedd3ae3668a68caa
@@ -939,7 +946,6 @@ vendor/lib/libsndmonitor.so
 vendor/lib/libspkrprot.so
 vendor/lib/libqsap_sdk.so
 vendor/lib/vendor.qti.hardware.audiohalext@1.0.so
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/lib64/libalAILDC.so
 vendor/lib64/libalCFR.so
