@@ -382,6 +382,10 @@ PRODUCT_PACKAGES += \
     librilutils \
     librmnetctl
 
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-lite-vendorcompat \
+    libprotobuf-cpp-full-vendorcompat \
+
 # Recovery
 PRODUCT_PACKAGES += \
     librecovery_updater_davinci
