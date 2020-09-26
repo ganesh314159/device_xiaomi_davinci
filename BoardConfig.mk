@@ -190,6 +190,7 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 USE_SENSOR_MULTI_HAL := true
 
 # Sepolicy
+TARGET_SEPOLICY_DIR := msmsteppe
 include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
