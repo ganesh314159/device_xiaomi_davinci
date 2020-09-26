@@ -168,9 +168,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@3.0.vendor
 
 PRODUCT_PACKAGES += \
-    gralloc.msmnile \
-    hwcomposer.msmnile \
-    memtrack.msmnile
+    gralloc.sm6150 \
+    hwcomposer.sm6150 \
+    memtrack.sm6150
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml
