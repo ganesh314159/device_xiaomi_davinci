@@ -50,6 +50,7 @@ vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
 vendor/lib/libadm.so
 vendor/lib/libaudcal.so
+vendor/lib/libaudioparsers.so
 vendor/lib/libaudioconfigstore.so
 vendor/lib/libaudioroute_ext.so
 vendor/lib/libaudio_log_utils.so
@@ -59,7 +60,6 @@ vendor/lib/libqtigef.so
 vendor/lib/libsurround_3mic_proc.so
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libmisoundfx.so
-vendor/lib/soundfx/libshoebox.so
 
 # Audio-ACDB
 vendor/etc/acdbdata/adsp_avs_config.acdb
@@ -74,7 +74,7 @@ vendor/etc/acdbdata/Forte/Forte_Speaker_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_workspaceFile.qwsp
 
 # Audio-Hardware
-vendor/lib/hw/audio.primary.msmnile.so
+vendor/lib/hw/audio.primary.sm6150.so
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
