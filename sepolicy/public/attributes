@@ -1,5 +1,11 @@
-hal_attribute(mlipay)
+attribute hal_mlipay;
+attribute hal_mlipay_client;
+attribute hal_mlipay_server;
 
-hal_attribute(touchfeature)
+attribute hal_touchfeature;
+attribute hal_touchfeature_client;
+attribute hal_touchfeature_server;
 
-hal_attribute(motor)
+attribute hal_motor;
+attribute hal_motor_client;
+attribute hal_motor_server;
