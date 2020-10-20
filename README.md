@@ -1,26 +1,28 @@
 Copyright (C) 2019 Paranoid Android
 
-Device configuration for Xiaomi Mi 9
-=========================================
+Device configuration for Xiaomi Mi 9T/Redmi K20
+===============================================
 
-The Xiaomi Mi 9 (codenamed _"cepheus"_) is a high-end smartphone from Xiaomi.
+The Xiaomi Mi 9T/Redmi K20, codenamed _"davinci(in)"_, is a mid-range smartphone from Xiaomi.
 
-It was announced in February 2019. Release date was February 2019.
+It was announced and released in June 2019.
 
 ## Device specifications
 
 Basic   | Spec Sheet
 -------:|:-------------------------
-SoC     | Qualcomm SDM855 Snapdragon 855
-CPU     | Octa-core (12.84 GHz Kryo 485 & 32.42GHz Kryo 485 & 41.8GHz Kryo 485)
-GPU     | Adreno 640
-Memory  | 6/8 GB RAM
-Shipped Android Version | 9.0 with MIUI 10
-Storage | 64/128/256 GB
-Battery | Non-removable Li-Po 3300 mAh battery
-Display | 1080 x 2340 pixels, 19.5:9 ratio, 6.39 inches, AMOLED HDR (~403 ppi density)
-Camera  | 48MP(Primary) 16MP(Ultra-wide) 12MP(Telephoto)
+CPU     | Octa-core 2 x 2.2GHz Kryo 470 Gold and 6 x 1.8GHz Kryo 470 Silver
+Chipset | Qualcomm SDM730 Snapdragon 730
+GPU     | Adreno 618
+Memory  | 6GB RAM
+Shipped OS Version | Android 9.0 Pie with MIUI 10
+Storage | 64/128GB (UFS 2.0)
+Battery | Non-removable Li-Po 4000 mAh
+Dimensions | 156.7 x 74.3 x 8.8mm
+Display | 1080 x 2340 pixels, 6.39 inches (~403 ppi pixel density)
+Rear Camera Setup | 48MP wide, 8MP tele and 13MP ultrawide lens
+Front Camera | 20MP Motorized pop-up
 
 ## Device picture
 
-![Xiaomi Mi 9](https://xiaomi-mi.com/uploads/CatalogueImage/mi9%20(3)_17412_1550674143.jpg "Xiaomi Mi 9 in black")
+![Xiaomi Mi 9T/Redmi K20](https://www.mi-srbija.rs/img/products/banner/083035152320b06d663c600175bc8ff5cb3ae253c0e3d4afff25d1b9535b0fc1.png "Xiaomi Mi 9T/Redmi K20")
