@@ -317,10 +317,9 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
-    com.gsma.services.nfc \
     com.nxp.nfc.nq \
+    NQNfcNci \
     nfc_nci.nqx.default.hw \
-    NfcNci \
     Tag \
     vendor.nxp.hardware.nfc@1.2-service
 
