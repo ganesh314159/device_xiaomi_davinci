@@ -35,7 +35,6 @@ void load_davinciglobal() {
     property_override("ro.product.model", "Mi 9T");
     property_override("ro.build.product", "davinci");
     property_override("ro.product.device", "davinci");
-    property_override("ro.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
     property_override("ro.product.mod_device", "davinci_global");
     property_override("ro.com.google.clientidbase", "android-xiaomi");
     property_override("ro.com.google.clientidbase.ms", "android-xiaomi-rev1");
@@ -45,7 +44,6 @@ void load_davinciin() {
     property_override("ro.product.model", "Redmi K20");
     property_override("ro.build.product", "davinciin");
     property_override("ro.product.device", "davinciin");
-    property_override("ro.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
     property_override("ro.product.mod_device", "davinciin_in_global");
     property_override("ro.com.google.clientidbase", "android-xiaomi-rev1");
 }
@@ -54,7 +52,6 @@ void load_davinci() {
     property_override("ro.product.model", "Redmi K20");
     property_override("ro.build.product", "davinci");
     property_override("ro.product.device", "davinci");
-    property_override("ro.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
 }
 
 void vendor_load_properties() {
