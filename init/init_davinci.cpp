@@ -50,7 +50,6 @@ void load_davinciin() {
     property_override("ro.product.device", "davinciin");
     property_override("ro.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
     property_override("ro.product.mod_device", "davinciin_in_global");
-    property_override("ro.boot.product.hardware.sku", "davinciin");
     property_override("ro.com.google.clientidbase", "android-xiaomi-rev1");
 }
 
