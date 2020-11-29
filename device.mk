@@ -40,8 +40,7 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-pe
+    $(LOCAL_PATH)/overlay
 
 # Product characteristics
 PRODUCT_CHARACTERISTICS := nosdcard
@@ -338,14 +337,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.uicc.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
-
-# NN
-PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full-rtti
-
-# PixelLiveWallpaper
-PRODUCT_PACKAGES += \
-    PixelLiveWallpaperPrebuilt
 
 # Power
 PRODUCT_PACKAGES += \

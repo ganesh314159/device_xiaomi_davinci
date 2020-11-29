@@ -17,5 +17,5 @@
 <resources>
     <!-- Max Height of the sliding KeyguardSecurityContainer
          (includes 2x keyguard_security_view_top_margin) -->
-    <dimen name="kg_security_container_min_bottom_margin">550px</dimen>
+    <dimen name="kg_security_container_min_bottom_margin">500px</dimen>
 </resources>

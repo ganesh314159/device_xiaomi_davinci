@@ -22,7 +22,7 @@
     <!-- the padding on the top of the statusbar (usually 0) -->
     <dimen name="status_bar_padding_top">2dp</dimen>
 
-    <dimen name="system_icons_keyguard_padding_end">18dp</dimen>
+    <dimen name="system_icons_keyguard_padding_end">9dp</dimen>
 
     <dimen name="keyguard_carrier_text_margin">24dp</dimen>
 

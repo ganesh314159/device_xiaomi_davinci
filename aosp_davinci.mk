@@ -20,7 +20,6 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
-TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_USES_AOSP_RECOVERY := true
 
 # Device identifier. This must come after all inclusions.
