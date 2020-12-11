@@ -38,7 +38,7 @@ def AddImage(info, basename, dest, incremental):
     input_zip = info.input_zip
   data = input_zip.read("IMAGES/" + basename)
   common.ZipWriteStr(info.output_zip, name, data)
-  info.script.Print("Patching {} image unconditionally...".format(dest.split('/')[-1]))
+  info.script.Print("Flashing {}...".format(dest.split('/')[-1]))
   info.script.AppendExtra('package_extract_file("%s", "%s");' % (name, dest))
 
 def OTA_InstallEnd(info, incremental):
