@@ -54,6 +54,6 @@ def AddBasebandAssertion(info, input_zip):
     result = re.search(r'require\s+version-{}\s*=\s*(\S+)'.format(variant), android_info)
     if result is not None:
       variants.append(result.group(1).split(','))
-  cmd = 'assert(getprop("ro.boot.hwc") == "{0}" && (xiaomi.verify_baseband("{2}", "{1}") == "1" || abort("ERROR: This package requires baseband from atleast {2}. Please upgrade firmware and retry!");) || true);' 
+  cmd = 'assert(getprop("ro.boot.hwc") == "{0}" && (xiaomi.verify_baseband("{2}", "{1}") == "1" || abort("ERROR: This package requires baseband from atleast {2}. Please upgrade your firmware to latest one available and retry! Get the latest firmware from www.xiaomifirmwareupdater.com. DO NOT REMOVE ASSERT LINES FROM THIS ZIP!");) || true);' 
   for variant in variants:
     info.script.AppendExtra(cmd.format(*variant))
