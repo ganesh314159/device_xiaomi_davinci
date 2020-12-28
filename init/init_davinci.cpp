@@ -31,13 +31,14 @@ void property_override(char const prop[], char const value[])
     else
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
-void load_davinciglobal() {
+void load_davinci_global() {
     property_override("ro.product.model", "Mi 9T");
     property_override("ro.build.product", "davinci");
     property_override("ro.product.device", "davinci");
     property_override("ro.product.mod_device", "davinci_global");
     property_override("ro.com.google.clientidbase", "android-xiaomi");
     property_override("ro.com.google.clientidbase.ms", "android-xiaomi-rev1");
+    property_override("ro.boot.product.hardware.sku", "davinci_global");
 }
 
 void load_davinciin() {
@@ -46,23 +47,25 @@ void load_davinciin() {
     property_override("ro.product.device", "davinciin");
     property_override("ro.product.mod_device", "davinciin_in_global");
     property_override("ro.com.google.clientidbase", "android-xiaomi-rev1");
+    property_override("ro.boot.product.hardware.sku", "davinciin");
 }
 
-void load_davinci() {
+void load_davinci_china() {
     property_override("ro.product.model", "Redmi K20");
     property_override("ro.build.product", "davinci");
     property_override("ro.product.device", "davinci");
+    property_override("ro.boot.product.hardware.sku", "davinci_china");
 }
 
 void vendor_load_properties() {
     std::string region = android::base::GetProperty("ro.boot.hwc", "");
 
-    if (region.find("CN") != std::string::npos) {
-        load_davinci();
+    if (region.find("GLOBAL") != std::string::npos) {
+        load_davinci_global();
     } else if (region.find("INDIA") != std::string::npos) {
         load_davinciin();
-    } else if (region.find("GLOBAL") != std::string::npos) {
-        load_davinciglobal();
+    } else if (region.find("CN") != std::string::npos) {
+        load_davinci_china();
     } else {
         LOG(ERROR) << __func__ << ": unexcepted region!";
     }
