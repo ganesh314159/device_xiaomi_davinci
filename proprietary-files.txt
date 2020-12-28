@@ -1,11 +1,12 @@
 #
 # All unpinned blobs here are extracted from 
-# davinci-user-11-RKQ1.200826.002-20.10.20
+# davinci-user-11-RKQ1.200826.002-20.12.10
 #
 
 # ADSP
 vendor/bin/adsprpcd
 vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc
+vendor/etc/init/vendor.qti.cdsprpc-service.rc
 vendor/lib/libadsprpc.so
 vendor/lib/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
@@ -14,6 +15,7 @@ vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
 
 # ADSP - Modules
+vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Encoder.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
 vendor/lib/rfsa/adsp/dirac_resource.dar
@@ -72,8 +74,11 @@ vendor/lib/libqtigef.so
 vendor/lib/libsurround_3mic_proc.so
 
 # Audio - SoundFX
+system_ext/etc/permissions/audiosphere.xml
+system_ext/framework/audiosphere.jar
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libmisoundfx.so
+vendor/lib/soundfx/libshoebox.so
 
 # Audio - ACDB
 vendor/etc/acdbdata/adsp_avs_config.acdb
@@ -94,33 +99,37 @@ vendor/lib/hw/audio.primary.sm6150.so
 system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 
-# Bluetooth - from sunfish-user 11 RP1A.200720.011 6746289 release-keys
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|2aa101db92b5d447604da82e80241ca1ff90e1e0
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|d5fcb9c2cf5538b9c946b9263b144e714433a578
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|d476c3b775284adc58715d8c4eba611e57a14ae1
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|340b1be364b7bb00d9334ec5eb7a024b1ba8244d
-vendor/lib64/libbtnv.so|086a227f793822ef3eed15aea21a207c68feb7a9
-vendor/lib64/libbt-hidlclient.so|36e6ba270c948d2cc04a686026f51afd2ff29712
+# Bluetooth
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib64/libbtnv.so
+vendor/lib64/libbt-hidlclient.so
 
-# Bluetooth AFH - from sunfish-user 11 RP1A.200720.011 6746289 release-keys
-vendor/lib64/hw/vendor.qti.hardware.bt_channel_avoidance@1.0-impl.so|1d40e15715e3bb0b8a5a56c5a8d8e6a56da55b95
-vendor/lib64/vendor.qti.hardware.bt_channel_avoidance@1.0.so|1790304e928315e051855bccb7897d75fa41dc5e
-vendor/lib/hw/vendor.qti.hardware.bt_channel_avoidance@1.0-impl.so|c378868917b58a32de4b56b8db4db261ad5310d8
-vendor/lib/vendor.qti.hardware.bt_channel_avoidance@1.0.so|e9ca98f2ebe8214185e1ece31fe035080c0c4055
+# Bluetooth Audio
+vendor/lib/hw/audio.bluetooth_qti.default.so
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
+vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
+vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
+vendor/lib/libbluetooth_audio_session_qti.so
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so
+vendor/lib64/btaudio_offload_if.so
+vendor/lib64/hw/audio.bluetooth_qti.default.so
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
+vendor/lib64/libbluetooth_audio_session_qti.so
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
+vendor/lib/btaudio_offload_if.so
 
-# Bluetooth Audio - from sunfish-user 11 RP1A.200720.011 6746289 release-keys
-vendor/lib64/btaudio_offload_if.so|15fccd6223460e4a86570e2afcfb328f9be04142
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|1ed1d39a21f63f264eb5ee8ce61236b576de3931
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|73a21d7de95341f64f65859c995064ddcfb0a422
-vendor/lib64/libbluetooth_audio_session_qti.so|155de8211750484596107b6e0a206075c69b2027
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|2bdd8a3fdcbc04f120c5647f2b289c73a132fb6b
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|6bc11d40eed839c52704483728f0e87c4e0f5d6f
-vendor/lib/btaudio_offload_if.so|2df45d5adf93ae9eba40e3e7e21398499acc3b7a
-vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|f6eca6bfa66496498a5a9e17f9701670a931a28f
-vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|d2d55bf0a11eed058a76406cfa5d45d63a0a4f21
-vendor/lib/libbluetooth_audio_session_qti.so|409fe8e1e261e7b004e1df5851ea3ae9f13a4547
-vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so|5f907ebfb73087861b30cf1c69e07aeca2096620
-vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so|d8cc4680848db03ddcfd99a53cbe1b15b7b282da
+# Bluetooth - Configstore
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
 
 # CDSP
 vendor/bin/cdsprpcd
@@ -339,7 +348,7 @@ vendor/lib64/libarcsoft_preview_deflicker.so
 vendor/lib64/libarcsoft_supernight.so
 
 # Camera - configs
-vendor/etc/camera/MIUI_Time.ttf
+vendor/etc/camera/MILanPro_Regular.ttf
 vendor/etc/camera/Miui-Light.ttf
 vendor/etc/camera/almalence_sr_params_tele.config
 vendor/etc/camera/almalence_sr_params_wide.config
@@ -366,6 +375,7 @@ vendor/etc/camera/male_bg.png
 vendor/etc/camera/male_icon.png
 vendor/etc/camera/mibokeh_712_opencl.bin
 vendor/etc/camera/mibokeh_712_parameter.bin
+vendor/etc/camera/Roboto_Medium.ttf
 vendor/etc/camera/Roboto-Thin.ttf
 vendor/etc/camera/sceneDetection.xml
 vendor/etc/camera/score_bg.png
@@ -628,7 +638,6 @@ vendor/lib64/libOpenCL.so|8c8489db818c4089459574090d6111db4e0802d0
 vendor/lib64/libVkLayer_q3dtools.so|ee5f04c4847dcdf9816bde46380746f9bc0580ed
 vendor/lib64/libadreno_app_profiles.so|a886185ce566287c0c5eb55397f51204cedf9de1
 vendor/lib64/libadreno_utils.so|5f443c3d118d534d59139c56658f58962cdf93c5
-vendor/lib64/libc2d30_bltlib.so|aa37c84cf6cc1e1ac670b433c97d0bf41308f9ca
 vendor/lib64/libgpudataproducer.so|35e572b0f91c74a1d1da0b87b109c4215c3271e8
 vendor/lib64/libgsl.so|d2d2d524882db9500260a8cd9883e9e9446318ac
 vendor/lib64/libllvm-glnext.so|6bf88dd28b9f967c63382610f5064b25bf25d89d
@@ -848,7 +857,6 @@ vendor/lib64/libril-qc-ltedirectdisc.so
 vendor/lib64/libril-qc-radioconfig.so
 vendor/lib64/libril-qcril-hook-oem.so
 vendor/lib64/librilqmiservices.so
-vendor/lib64/librmnetctl.so
 vendor/lib64/libsettings.so
 vendor/lib64/libsystem_health_mon.so
 vendor/lib64/qcrild_librilutils.so
@@ -1014,6 +1022,7 @@ vendor/etc/thermal-nolimits.conf
 vendor/etc/thermal-normal.conf
 vendor/etc/thermal-phone.conf
 vendor/etc/thermal-tgame.conf
+vendor/etc/thermal-youtube.conf
 vendor/etc/thermald-devices.conf
 vendor/lib64/libthermalclient.so
 

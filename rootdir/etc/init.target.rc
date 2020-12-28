@@ -63,15 +63,22 @@ on fs
     #+ add for watermark
     mkdir /mnt/vendor/persist/camera 0777 root root
     mount vfat /dev/block/bootdevice/by-name/logfs /dev/logfs noatime umask=006,uid=1000,gid=1000
+    chown system system /sys/class/smartpa/re25_calib
     chown system system /dev/tfa_reg
     chown system system /dev/tfa_rw
     chown system system /dev/tfa_rpc
     chown system system /dev/tfa_control
+    chmod 0666 /sys/class/smartpa/re25_calib
     chmod 0660 /dev/tfa_reg
     chmod 0660 /dev/tfa_rw
     chmod 0660 /dev/tfa_rpc
     chmod 0660 /dev/tfa_control
     chmod 644 /persist/audio/us_manual_cal
+
+    chown system system /sys/class/hphlr_impedance/hphl
+    chown system system /sys/class/hphlr_impedance/hphr
+    chmod 0440 /sys/class/hphlr_impedance/hphl
+    chmod 0440 /sys/class/hphlr_impedance/hphr
 
 on post-fs
     # set RLIMIT_MEMLOCK to 64MB
@@ -103,6 +110,9 @@ on post-fs-data
     chown system system /sys/class/drm/card0-DSI-1/dim_alpha
     chown system system /sys/class/drm/card0-DSI-1/fod_ui_ready
     chown system system /sys/class/drm/card0-DSI-1/dim_layer_enable
+    chown system system /sys/class/drm/card0-DSI-1/wp_info
+    chmod 0644 /sys/class/drm/card0-DSI-1/wp_info
+    chown system system /mnt/vendor/persist/display
 
 on property:ro.boot.dp=0x0 && property:ro.boot.secureboot=1
     write /sys/bus/platform/devices/c440000.qcom,spmi:qcom,pm6150@0:qcom,power-on@800/pshold_reboot 7
@@ -112,6 +122,7 @@ on property:ro.boot.dp=0x0 && property:ro.boot.secureboot=1
 on boot
     chown system system /sys/kernel/hbtp/display_pwr
     chown system system /proc/tp_selftest
+    chmod 0664 /proc/tp_selftest
     chown system system /sys/class/touch/touch_dev/palm_sensor
     chown system system /sys/class/leds/softlight_torch_0/brightness
     chown system system /sys/class/leds/softlight_torch_1/brightness
@@ -126,14 +137,14 @@ on boot
     write /dev/cpuset/background/cpus 0-3
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/top-app/cpus 0-7
-    write /dev/cpuset/top-app/boost/cpus 4-7
-    write /dev/cpuset/foreground/cpus 0-6
-    write /dev/cpuset/foreground/boost/cpus 0-6
-    write /dev/cpuset/background/cpus 0-1
-    write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/foreground/cpus 0-7
+    write /dev/cpuset/foreground/boost/cpus 0-7
+    write /dev/cpuset/background/cpus 0-7
+    write /dev/cpuset/system-background/cpus 0-7
     chown system system /sys/class/thermal/thermal_message/sconfig
 #disable qcom qc3p5
     setprop persist.vendor.cp.support_qc3p5 0
+    write /sys/block/sda/queue/wbt_lat_usec 75000
 
 # Add a cpuset for the camera daemon
 # We want all cores for camera
@@ -237,11 +248,6 @@ service spdaemon /vendor/bin/spdaemon
 #   group system
 #   disabled
 #
-
-on property:persist.sys.device_provisioned=1
-    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,7
-    setprop dalvik.vm.dex2oat-threads 6
-
 service thermal-engine /system/vendor/bin/thermal-engine
    class main
    user root
@@ -469,7 +475,9 @@ on property:vendor.dcvs.prop=1
 
 on property:vendor.audio.cit.spkcal.copy=true
     copy /data/vendor/cit/tfa9894_chk.txt /mnt/vendor/persist/audio/tfa9894_chk.txt
+    copy /data/vendor/cit/aw88263_chk.txt /mnt/vendor/persist/audio/aw88263_chk.txt
     chmod 666 /mnt/vendor/persist/audio/tfa9894_chk.txt
+    chmod 666 /mnt/vendor/persist/audio/aw88263_chk.txt
 service audioshell_service /vendor/bin/audioshell_service
     oneshot
     disabled
