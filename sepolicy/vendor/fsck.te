@@ -1,0 +1,2 @@
+dontaudit fsck block_device:blk_file { read write };
+dontaudit fsck self:capability { kill };
