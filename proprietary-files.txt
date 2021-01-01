@@ -638,12 +638,6 @@ vendor/lib64/libllvm-glnext.so|1bf1bdb1146fbaa895a57332021f9186e9499bef
 vendor/lib64/libllvm-qcom.so|e941ce6106becabec9c055ef36af372a6aa49aa5
 vendor/lib64/libpvr.so|211f51ef732f06f41eecab3ff69a4d461d7b24c8
 
-# Hotword - from qssi-user-11-RKQ1.200826.002-V12.2.3.0.RJKMIXM-release-keys
--product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|91c49e2f1f95fe76952eb55d7a936a997685b964
--product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk|89b2c917c0c35489f10306f1627b2cf7cf6b59cf
-system_ext/framework/com.android.hotwordenrollment.common.util.jar|0492cd3db2e253e23b78e56fa8ea7b3a4b15edeb
-system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a58554d9c0dd0608552b644fbf74519a447bb
-
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
 vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
@@ -658,15 +652,6 @@ vendor/lib64/libqtikeymaster4.so
 # Latency
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
 vendor/lib64/vendor.qti.latency@2.0.so
-
-# Listen - Hardware - qssi-user-11-RKQ1.200826.002-V12.2.3.0.RJKMIXM-release-keys
-vendor/lib/hw/sound_trigger.primary.sm6150.so|9788d256535beb648555eb81abbaf704e8ab7d78
-vendor/lib/libadpcmdec.so|5232c32b93a8653612cd8fcdde161a9d7fe39c7f
-vendor/lib/libgcs-calwrapper.so|8cf1158b9e2b687f41ccba805b08f3a7a798836e
-vendor/lib/libgcs-ipc.so|968eebf25011b654065d5c49a578fbc5d7bfe47a
-vendor/lib/libgcs-osal.so|7f592b86760afcf1c9f255cd8c645602ee1be56f
-vendor/lib/libgcs.so|0b1059e541905f713cac0d9cbeb1c2b5d6bc79b9
-vendor/lib/libsmwrapper.so|36f382d4319597ac748c0e56f095bdaf214d6829
 
 # Media
 vendor/lib/libdsd2pcm.so
