@@ -25,4 +25,4 @@ Front Camera | 20MP Motorized pop-up
 
 ## Device picture
 
-![Xiaomi Mi 9T/Redmi K20](https://www.mi-srbija.rs/img/products/banner/083035152320b06d663c600175bc8ff5cb3ae253c0e3d4afff25d1b9535b0fc1.png "Xiaomi Mi 9T/Redmi K20")
+![Xiaomi Mi 9T/Redmi K20](https://raw.githubusercontent.com/PixelExperience/official_devices/master/images/.thumbs/300/davinci.png "Xiaomi Mi 9T/Redmi K20")
