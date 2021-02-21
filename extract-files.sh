@@ -67,6 +67,9 @@ function blob_fixup() {
         patchelf --remove-needed "libmegface.so" "${2}"
         patchelf --add-needed "libshim_megvii.so" "${2}"
         ;;
+    vendor/lib64/mi.motor.daemon.so)
+        sed -i "s/ro.product.system.manufacturer/ro.product.system.manufactured/g" "${2}"
+        ;;
     esac
 }
 
