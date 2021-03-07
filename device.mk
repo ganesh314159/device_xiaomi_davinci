@@ -134,9 +134,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service_64
 
 PRODUCT_PACKAGES += \
-    libshim_megvii
-
-PRODUCT_PACKAGES += \
     CameraGo
 
 PRODUCT_COPY_FILES += \
