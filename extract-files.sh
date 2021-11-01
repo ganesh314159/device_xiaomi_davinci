@@ -57,7 +57,9 @@ function blob_fixup() {
     case "${1}" in
         vendor/lib64/mi.motor.daemon.so)
             sed -i "s/ro.product.system.manufacturer/ro.product.system.manufactured/g" "${2}"
-            ;;
+        ;;
+        system_ext/lib64/lib-imsvideocodec.so)
+            $PATCHELF_TOOL --add-needed "libgui-shim.so" "${2}"
     esac
 }
 
