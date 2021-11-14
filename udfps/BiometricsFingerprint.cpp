@@ -91,8 +91,12 @@ BiometricsFingerprint::BiometricsFingerprint() {
                 LOG(ERROR) << "failed to poll fd, err: " << rc;
                 continue;
             }
+            bool fingerDown = readBool(fd);
             xiaomiFingerprintService->extCmd(COMMAND_NIT,
-                    readBool(fd) ? PARAM_NIT_FOD : PARAM_NIT_NONE);
+                    fingerDown ? PARAM_NIT_FOD : PARAM_NIT_NONE);
+            if (!fingerDown) {
+                touchFeatureService->resetTouchMode(Touch_Fod_Enable);
+            }
         }
     }).detach();
 }
@@ -147,7 +151,6 @@ Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, floa
 }
 
 Return<void> BiometricsFingerprint::onFingerUp() {
-    touchFeatureService->resetTouchMode(Touch_Fod_Enable);
     return Void();
 }
 
