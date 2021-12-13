@@ -56,7 +56,8 @@ public class PickupSensor implements SensorEventListener {
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        if (DEBUG) Log.d(TAG, "Got sensor event: " + event.values[0]);
+        if (DEBUG)
+            Log.d(TAG, "Got sensor event: " + event.values[0]);
 
         long delta = SystemClock.elapsedRealtime() - mEntryTimestamp;
         if (delta < MIN_PULSE_INTERVAL_MS) {
@@ -66,7 +67,7 @@ public class PickupSensor implements SensorEventListener {
         mEntryTimestamp = SystemClock.elapsedRealtime();
 
         if (event.values[0] == 1) {
-            DozeUtils.wakeOrLaunchDozePulse(mContext);
+            DozeUtils.requestPulse(mContext);
         }
     }
 
@@ -76,7 +77,8 @@ public class PickupSensor implements SensorEventListener {
     }
 
     protected void enable() {
-        if (DEBUG) Log.d(TAG, "Enabling");
+        if (DEBUG)
+            Log.d(TAG, "Enabling");
         submit(() -> {
             mSensorManager.registerListener(this, mSensor,
                     SensorManager.SENSOR_DELAY_NORMAL);
@@ -85,7 +87,8 @@ public class PickupSensor implements SensorEventListener {
     }
 
     protected void disable() {
-        if (DEBUG) Log.d(TAG, "Disabling");
+        if (DEBUG)
+            Log.d(TAG, "Disabling");
         submit(() -> {
             mSensorManager.unregisterListener(this, mSensor);
         });
