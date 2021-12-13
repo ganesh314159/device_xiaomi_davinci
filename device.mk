@@ -63,9 +63,6 @@ PRODUCT_PACKAGES += \
     com.dsi.ant.antradio_library \
     com.dsi.ant@1.0.vendor
 
-PRODUCT_COPY_FILES += \
-    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
-
 # ATRACE_HAL
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
@@ -87,7 +84,6 @@ PRODUCT_PACKAGES += \
     libvolumelistener \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libqcomvoiceprocessingdescriptors \
     libqcompostprocbundle
 
 PRODUCT_PACKAGES += \
@@ -122,9 +118,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
-    libbthost_if \
-    libldacBT_dec \
-    vendor.qti.hardware.bluetooth_audio@2.0.vendor
+    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
+    vendor.qti.hardware.btconfigstore@1.0.vendor \
+    vendor.qti.hardware.btconfigstore@2.0.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
@@ -171,7 +167,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libdisplayconfig.qti \
     vendor.display.config@2.0 \
-    vendor.display.config@2.0.vendor \
+    vendor.display.config@2.0.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml
@@ -298,8 +294,6 @@ PRODUCT_PACKAGES += \
     libOmxEvrcEnc \
     libOmxG711Enc \
     libOmxQcelp13Enc \
-    libOmxSwVdec \
-    libOmxSwVencMpeg4 \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw
@@ -340,6 +334,7 @@ PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service \
     android.hardware.nfc@1.2.vendor \
     com.android.nfc_extras \
+    libchrome.vendor \
     NfcNci \
     Tag \
     vendor.nxp.hardware.nfc@2.0-service
@@ -364,6 +359,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libqti-perfd-client \
     vendor.qti.hardware.perf@2.0.vendor
+
+# Popup motor
+PRODUCT_PACKAGES += \
+    vendor.xiaomi.hardware.motor@1.0.vendor
 
 # Power
 PRODUCT_PACKAGES += \
@@ -405,7 +404,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-vendorcompat \
-    libprotobuf-cpp-full-vendorcompat \
+    libprotobuf-cpp-full-vendorcompat
 
 # Recovery
 PRODUCT_PACKAGES += \
@@ -507,8 +506,6 @@ PRODUCT_COPY_FILES += \
 
 # WiFi Display
 PRODUCT_PACKAGES += \
-    libdisplayconfig \
-    libdisplayconfig.vendor \
     libnl \
     libqdMetaData \
     libqdMetaData.system

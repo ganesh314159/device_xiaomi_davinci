@@ -130,12 +130,8 @@ vendor/lib/btaudio_offload_if.so
 # Bluetooth - Configstore
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
-vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so
-vendor/lib64/vendor.qti.hardware.btconfigstore@2.0.so
 vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
-vendor/lib/vendor.qti.hardware.btconfigstore@1.0.so
-vendor/lib/vendor.qti.hardware.btconfigstore@2.0.so
 
 # Bluetooth - aptX - from sunfish RQ2A.210405.005
 system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
@@ -416,7 +412,6 @@ vendor/lib64/libmivendor_module_calibration.so
 vendor/lib64/libmivendor_module_hall.so
 vendor/lib64/libmivendor_module_motor.so
 vendor/lib64/mi.motor.daemon.so
-vendor/lib64/vendor.xiaomi.hardware.motor@1.0.so
 
 # Camera (popup sound effects)
 media/audio/ui/popup_cangmen_down.ogg
@@ -844,7 +839,6 @@ vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
 vendor/etc/libese-nxp.conf
 vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
 vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
-vendor/lib64/libchrome.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
