@@ -34,8 +34,4 @@
 
     <!-- Margin end of the system icons super container when the avatar is missing. -->
     <dimen name="system_icons_super_container_avatarless_margin_end">24.75px</dimen>
-
-    <!-- The margin between Emergency Carrier area and pattern/pin
-    view to incorporate the FOD icon -->
-    <dimen name="keyguard_security_fod_view_margin">100dp</dimen>
 </resources>
