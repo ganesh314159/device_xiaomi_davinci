@@ -1,11 +1,8 @@
-# Manufacturer
-type system_manufacturer_prop, property_type;
-
 # Power
-type power_prop, property_type;
+vendor_internal_prop(power_prop)
 
 # Sensor
-type persist_sensors_prop, property_type;
+vendor_internal_prop(persist_sensors_prop)
 
 # Thermal
-type vendor_thermal_prop, property_type;
+vendor_internal_prop(vendor_thermal_prop)
