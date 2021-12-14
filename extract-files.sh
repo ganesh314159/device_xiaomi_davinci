@@ -58,6 +58,9 @@ function blob_fixup() {
         vendor/lib64/mi.motor.daemon.so)
             sed -i "s/ro.product.system.manufacturer/ro.product.system.manufactured/g" "${2}"
         ;;
+        vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so)
+            $PATCHELF_TOOL --remove-needed "android.hardware.power@1.2.so" "${2}"
+        ;;
         system_ext/lib64/lib-imsvideocodec.so)
             $PATCHELF_TOOL --add-needed "libgui-shim.so" "${2}"
     esac
