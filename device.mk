@@ -510,12 +510,6 @@ PRODUCT_PACKAGES += \
     libqdMetaData \
     libqdMetaData.system
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/permissions/wfd-system-ext-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml
-
 # XiaomiParts
 PRODUCT_PACKAGES += \
     XiaomiParts
