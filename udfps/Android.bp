@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2019-2020 The LineageOS Project
+// Copyright (C) 2017-2021 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,12 +16,12 @@
 cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
-    name: "vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.davinci",
-    vintf_fragments: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.davinci.xml"],
-    init_rc: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.davinci.rc"],
+    name: "android.hardware.biometrics.fingerprint@2.3-service.davinci",
+    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.3-service.davinci.xml"],
+    init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.davinci.rc"],
     srcs: [
-	"service.cpp",
-        "FingerprintInscreen.cpp",
+        "service.cpp",
+        "BiometricsFingerprint.cpp",
     ],
     vendor: true,
     shared_libs: [
@@ -30,16 +30,19 @@ cc_binary {
         "libhidlbase",
         "liblog",
         "libutils",
+        "libcutils",
+        "android.hardware.biometrics.fingerprint@2.1",
+        "android.hardware.biometrics.fingerprint@2.2",
+        "android.hardware.biometrics.fingerprint@2.3",
         "vendor.goodix.hardware.biometrics.fingerprint@2.1",
-        "vendor.lineage.biometrics.fingerprint.inscreen@1.0",
         "vendor.xiaomi.hardware.fingerprintextension@1.0",
         "vendor.xiaomi.hardware.touchfeature@1.0",
     ],
 }
 
 cc_library_static {
-    name: "libfod_extension.davinci",
-    srcs: ["fod_extension.cpp"],
+    name: "libudfps_extension.davinci",
+    srcs: ["UdfpsExtension.cpp"],
     include_dirs: [
         "frameworks/native/services/surfaceflinger/CompositionEngine/include"
     ],

@@ -1,0 +1,8 @@
+on boot
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/fod_ui
+    chmod 0444 /sys/devices/platform/soc/soc:qcom,dsi-display/fod_ui
+
+service vendor.fps_hal.davinci /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.3-service.davinci
+    class late_start
+    user system
+    group system input uhid
