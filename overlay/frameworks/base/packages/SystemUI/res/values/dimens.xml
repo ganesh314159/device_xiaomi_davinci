@@ -15,23 +15,11 @@
 */
 -->
 <resources>
-    <dimen name="rounded_corner_content_padding">37.125px</dimen>
-
-    <!-- the padding on the start of the statusbar -->
-    <dimen name="status_bar_padding_start">24.75px</dimen>
-
-    <!-- the padding on the end of the statusbar -->
-    <dimen name="status_bar_padding_end">24.75px</dimen>
+    <dimen name="rounded_corner_content_padding">20dp</dimen>
 
     <!-- the padding on the top of the statusbar (usually 0) -->
     <dimen name="status_bar_padding_top">3px</dimen>
 
     <!-- Margin on the left side of the carrier text on Keyguard -->
-    <dimen name="keyguard_carrier_text_margin">63.25px</dimen>
-
-    <!-- Margin on the right side of the system icon group on Keyguard. -->
-    <dimen name="system_icons_keyguard_padding_end">24.75px</dimen>
-
-    <!-- Margin end of the system icons super container when the avatar is missing. -->
-    <dimen name="system_icons_super_container_avatarless_margin_end">24.75px</dimen>
+    <dimen name="keyguard_carrier_text_margin">28dp</dimen>
 </resources>
