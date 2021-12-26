@@ -244,6 +244,7 @@ include vendor/xiaomi/sdm845-common-extra/ifaa.mk
 
 # Init
 PRODUCT_PACKAGES += \
+    init.qcom.sh \
     init.class_main.sh \
     init.qcom.early_boot.sh \
     init.qcom.usb.sh \
