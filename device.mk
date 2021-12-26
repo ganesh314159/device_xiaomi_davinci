@@ -183,10 +183,7 @@ PRODUCT_PACKAGES += \
 
 # Blur
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.surface_flinger.supports_background_blur=1 \
-    ro.sf.blurs_are_expensive=1 \
-    persist.sys.sf.disable_blurs=1 \
-    persist.sysui.disableBlur=true
+    ro.surface_flinger.supports_background_blur=0
 
 # Fingerprint
 PRODUCT_PACKAGES += \
