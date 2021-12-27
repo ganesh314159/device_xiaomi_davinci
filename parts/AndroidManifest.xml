@@ -31,10 +31,6 @@
         android:name="org.pixelexperience.device.MANAGE_POPUP_CAMERA_SERVICE"
         android:protectionLevel="signature|privileged" />
 
-    <uses-sdk
-        android:minSdkVersion="24"
-        android:targetSdkVersion="24"/>
-
     <application
         android:label="@string/device_settings_app_name"
         android:persistent="true">
