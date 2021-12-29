@@ -1,4 +1,0 @@
-get_prop(gpuservice, graphics_config_prop)
-
-binder_call(nfc, gpuservice)
-binder_call(xiaomiparts_app, gpuservice)

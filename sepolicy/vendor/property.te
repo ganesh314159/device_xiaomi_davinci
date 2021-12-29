@@ -1,8 +1,0 @@
-# Power
-vendor_internal_prop(power_prop)
-
-# Sensor
-vendor_internal_prop(persist_sensors_prop)
-
-# Thermal
-vendor_internal_prop(vendor_thermal_prop)

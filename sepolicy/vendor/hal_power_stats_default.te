@@ -1,6 +1,7 @@
 type sysfs_iio_devices, fs_type, sysfs_type;
 type sysfs_msm_wlan, sysfs_type, fs_type;
 type sysfs_power_stats, sysfs_type, fs_type;
+type power_stats_service, vndservice_manager_type;
 type sysfs_power_stats_ignore, sysfs_type, fs_type;
 
 allow hal_power_stats_default sysfs_msm_wlan:dir search; # Needed to traverse to wlan stats file

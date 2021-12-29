@@ -4,6 +4,8 @@ app_domain(xiaomiparts_app)
 
 hal_client_domain(xiaomiparts_app, hal_motor)
 
+binder_call(xiaomiparts_app, gpuservice)
+
 # Access standard system services
 allow xiaomiparts_app app_api_service:service_manager find;
 allow xiaomiparts_app audioserver_service:service_manager find;
@@ -19,6 +21,7 @@ allow xiaomiparts_app system_app_data_file:{ file lnk_file } create_file_perms;
 
 allow xiaomiparts_app {
     sysfs_leds
+    system_data_file
     vendor_sysfs_graphics
 }:dir search;
 
