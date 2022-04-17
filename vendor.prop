@@ -110,6 +110,7 @@ persist.vendor.camera.logInfoMask=false
 # Data modules
 persist.vendor.data.mode=concurrent
 persist.vendor.data.iwlan.enable=true
+ro.vendor.use_data_netmgrd=true
 
 # Dalvik
 pm.dexopt.boot=verify
@@ -133,6 +134,11 @@ vendor.display.disable_ui_3d_tonemap=1
 vendor.display.enable_default_color_mode=1
 vendor.display.enable_null_display=0
 vendor.display.enable_optimize_refresh=1
+
+# DPM
+persist.vendor.dpm.loglevel=0
+persist.vendor.dpm.nsrm.bkg.evt=3955
+persist.vendor.dpmhalservice.enable=1
 
 # FM
 vendor.hw.fm.init=0
