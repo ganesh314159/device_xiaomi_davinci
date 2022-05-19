@@ -13,4 +13,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_davinci.mk
+    $(LOCAL_DIR)/blaze_davinci.mk
+
+COMMON_LUNCH_CHOICES := \
+	blaze_davinci-user \
+	blaze_davinci-userdebug \
+	blaze_davinci-eng
