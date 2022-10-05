@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/awaken_davinci.mk
+    $(LOCAL_DIR)/blaze_davinci.mk
 
 COMMON_LUNCH_CHOICES := \
-    awaken_davinci-user \
-    awaken_davinci-userdebug \
-    awaken_davinci-eng
+    blaze_davinci-user \
+    blaze_davinci-userdebug \
+    blaze_davinci-eng

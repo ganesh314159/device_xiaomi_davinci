@@ -12,22 +12,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/davinci/device.mk)
 
 # Inherit some common AOSP stuff.
-$(call inherit-product, vendor/awaken/config/common_full_phone.mk)
+$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
+
+# Screen Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Extras
-AWAKEN_BUILD_TYPE := OFFICIAL
-USE_GAPPS := true
 TARGET_GAPPS_ARCH := arm64
 TARGET_INCLUDE_LIVE_WALLPAPERS := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
 TARGET_INCLUDE_STOCK_ARCORE := true
 
-PRODUCT_NAME := awaken_davinci
+PRODUCT_NAME := blaze_davinci
 PRODUCT_DEVICE := davinci
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Mi 9T
+PRODUCT_MODEL := Redmi K20 / Mi 9T
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
