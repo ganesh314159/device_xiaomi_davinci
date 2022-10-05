@@ -213,3 +213,5 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from proprietary files
 include vendor/xiaomi/davinci/BoardConfigVendor.mk
+
+ALLOW_MISSING_DEPENDENCIES := true
